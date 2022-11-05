@@ -16,7 +16,7 @@ const Explore = () => {
                 const filterArr = details.filter((blog) => blog.id === parseInt(userId))
                 setData(filterArr[0])
             })
-    },[])
+    },[userId,pageRoute])
 
     return (
         <div>
