@@ -7,14 +7,14 @@ const Hollywood = () => {
     const [dataTop, setDataTop] = useState([]);
 
     useEffect(() => {
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/hollywood")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/hollywood")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
                 setData(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/top")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/top")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
@@ -51,18 +51,10 @@ const Hollywood = () => {
                 )
             })
           }
-    
-    
-    
-    
+ 
           
         </div>
-    
-    
-    
-    
-    
-    
+ 
         <div className="rightContained">
           <h1 className='bollyTitle'>Top Posts</h1>
     

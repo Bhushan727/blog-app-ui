@@ -9,7 +9,7 @@ const Explore = () => {
   const [data,setData] = useState({})
   
   useEffect(() => {
-        fetch(`https://blog-api-node-bhushan.herokuapp.com/api/${pageRoute}`)
+        fetch(`https://bhushan727-blog-app-api.cyclic.app/api/${pageRoute}`)
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
@@ -19,6 +19,7 @@ const Explore = () => {
     },[userId,pageRoute])
 
     return (
+      
         <div>
           <div className="detailsContainer">
     

@@ -10,14 +10,14 @@ const Bollywood = () => {
     const [len,setLen] = useState(3);
 
     useEffect(() => {
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/bollywood")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/bollywood")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
                 setData(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/top")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/top")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
@@ -34,29 +34,27 @@ const Bollywood = () => {
 
       {
         data.slice(0,len).map((data, index) => {
-            return(
-    <Link className='blogItem-link' to={`/bollywood/${data.id}`} key={index}>
-      <div className="cardContained">
-          <img src={data.image} alt="link not working" />
-          <div className="cardContents">
-              <h3 className="newsTitle">
-                {data.title}
-              </h3>
-              <div className="newsContent">
-                {data.content}
-              </div>
-                <h4 className="readMore">...read more</h4>
-              <h3 className="dateIssue">Issue date : <span>05/07/2022</span></h3>
-          </div>
+          return(
+              <Link className='blogItem-link' to={`/bollywood/${data.id}`} key={index}>
+                <div className="cardContained">
+                    <img src={data.image} alt="link not working" />
+                    <div className="cardContents">
+                        <h3 className="newsTitle">
+                          {data.title}
+                        </h3>
+                        <div className="newsContent">
+                          {data.content}
+                        </div>
+                          <h4 className="readMore">...read more</h4>
+                        <h3 className="dateIssue">Issue date : <span>05/07/2022</span></h3>
+                    </div>
 
-      </div>
-    </Link>
+                </div>
+              </Link>
 
             )
         })
       }
-
-
     <button onClick={e => setLen(len + 2)}>Load More</button>
 
       

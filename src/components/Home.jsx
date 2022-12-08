@@ -1,6 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -13,40 +11,37 @@ const Home = () => {
 
     useEffect(() => {
 
-
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/bollywood")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/bollywood")
             .then(response => response.json())
             .then((details) => {
                 setDataBolly(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/fitness")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/fitness")
             .then(response => response.json())
             .then((details) => {
                 setDataFit(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/technology")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/technology")
             .then(response => response.json())
             .then((details) => {
                 setDataTech(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/food")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/food")
             .then(response => response.json())
             .then((details) => {
                 setDataFood(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/top")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/top")
             .then(response => response.json())
             .then((details) => {
                 setDataTop(details)
             })
 
-
     },[])
-
 
   return (
     <div className='home'>
@@ -94,6 +89,8 @@ const Home = () => {
         }
         </div>
            
+{/*------------------------------- Fitness news three cards---------------------- */}
+
         <h1 className="headLine">
           Latest Fitness Stories
         </h1>
@@ -121,6 +118,7 @@ const Home = () => {
         </div>
 
 
+{/*------------------------------- Top News cards---------------------- */}
         <div className='mainContainer'>
         
         <div className="leftContainer">
@@ -148,8 +146,9 @@ const Home = () => {
             })
         }
         
-
         </div>
+
+        {/*------------------------------- Advertisment Container ---------------------- */}
         <div className="ritContainer">
 
             <div className="advertise">
@@ -161,7 +160,9 @@ const Home = () => {
         </div>    
     </div>
         
-        {/* Technology */}
+
+
+        {/*------------------------------- Technology news three cards---------------------- */}
         <h1 className="headLine">
           Latest Technology News
         </h1>
@@ -188,7 +189,9 @@ const Home = () => {
         }
         </div>
 
-        {/* Food Section */}
+
+
+        {/*------------------------------- Food news three cards---------------------- */}
         <h1 className="headLine">
           Latest Food Article
         </h1>

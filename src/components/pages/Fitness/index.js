@@ -7,14 +7,14 @@ const Fitness = () => {
     const [dataTop,setDataTop] = useState([]);
 
     useEffect(() => {
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/fitness")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/fitness")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
                 setData(details)
             })
 
-        fetch("https://blog-api-node-bhushan.herokuapp.com/api/top")
+        fetch("https://bhushan727-blog-app-api.cyclic.app/api/top")
             .then(response => response.json())
             .then((details) => {
                 console.log(details);
@@ -52,15 +52,8 @@ const Fitness = () => {
             })
           }
     
-    
-    
-    
           
         </div>
-    
-    
-    
-    
     
     
         <div className="rightContained">

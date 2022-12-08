@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
+
         <div className="heading">
             <h1 className='theSiren'><span className='the'>The</span> Siren</h1>
             <div className='navDiv'>
@@ -15,6 +16,7 @@ const Navbar = () => {
                 <NavLink to='/food' className='linkD'><li> Food </li></NavLink>
             </div>
         </div>
+        
     </>
   )
 }
